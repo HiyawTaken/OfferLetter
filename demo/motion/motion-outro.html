@@ -1,0 +1,18 @@
+<title>OfferLetter — A clearer job search</title>
+<style>
+.name{position:absolute;left:-600px;top:-68px;width:1200px;text-align:center;font-size:72px;font-weight:550;letter-spacing:-3px;white-space:nowrap;color:#f6f7f2}
+.desc{position:absolute;left:-600px;top:38px;width:1200px;text-align:center;font-size:27px;color:#b9c7bd}
+.top{position:absolute;left:120px;top:86px;font-size:22px;color:#596e60;letter-spacing:3px}
+.foot{position:absolute;left:120px;bottom:75px;font-size:22px;color:#617369}
+</style>
+<div data-slot="shape">
+<div class="L" id="local"><div class="name">Run it on your computer.</div><div class="desc">Muse verified locally · Chrome you can watch</div></div>
+<div class="L" id="zero"><div class="name" style="color:#14281c">0 applications submitted.</div><div class="desc" style="color:#365b45">The demo stops before final approval.</div></div>
+<div class="L" id="final"><div class="name">OfferLetter</div><div class="desc">Less repeated typing. More control.</div></div>
+</div><!--/shape-->
+<script>
+M.scene({W:1920,H:1080,T:12,bg:'#f4f5f1',intro:0.15,
+ SH:{local:{w:1240,h:270,r:36,bg:'#111b15',cam:1.12},zero:{w:1300,h:260,r:36,bg:'#91d5ad',cam:1.12},final:{w:1020,h:270,r:36,bg:'#111b15',cam:1.25}},start:'local',SEQ:[[3.5,'zero'],[7.3,'final']],
+ layers:[{el:'local',tin:0.15,tout:3.5},{el:'zero',tin:3.5,tout:7.3},{el:'final',tin:7.3,tout:null}],
+ cursor:{size:36,clicks:[],keys:[[0,650,300],[12,650,300]]}});
+</script>

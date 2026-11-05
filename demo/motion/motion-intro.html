@@ -1,0 +1,19 @@
+<title>OfferLetter — Your job search. Your final say.</title>
+<style>
+.headline{position:absolute;left:-480px;top:-65px;width:960px;text-align:center;font-size:68px;line-height:1.1;font-weight:560;letter-spacing:-3px;white-space:nowrap;color:#f4f7f2}
+.sub{position:absolute;left:-500px;top:40px;width:1000px;text-align:center;font-size:25px;color:#a9b6ae}
+.step{position:absolute;top:-15px;width:190px;font-size:28px;text-align:center;font-weight:500;color:#16281e}
+.tag{position:absolute;left:120px;top:86px;color:#64756a;font-size:22px;letter-spacing:3px;text-transform:uppercase}
+</style>
+<div data-slot="shape">
+<div class="L" id="brand"><div class="headline">OfferLetter</div><div class="sub">Less repetition. More possibility.</div></div>
+<div class="L" id="flow"><span class="step" style="left:-390px">Search</span><span class="step" style="left:-190px">Screen</span><span class="step" style="left:10px">Fill</span><span class="step" style="left:210px">Review</span></div>
+<div class="L" id="approval"><div class="headline" style="font-size:54px;top:-52px">Your approval comes first.</div><div class="sub" style="top:28px">Prepare locally. Review every answer.</div></div>
+</div><!--/shape-->
+<script>
+M.scene({W:1920,H:1080,T:12,bg:'#f4f5f1',intro:0.2,
+ SH:{brand:{w:1060,h:270,r:36,bg:'#111b15',cam:1.25},flow:{w:860,h:110,r:55,bg:'#91d5ad',cam:1.55},approval:{w:1080,h:230,r:32,bg:'#111b15',cam:1.27}},
+ start:'brand',SEQ:[[4.2,'flow'],[8.4,'approval']],
+ layers:[{el:'brand',tin:0.2,tout:4.2},{el:'flow',tin:4.2,tout:8.4},{el:'approval',tin:8.4,tout:null}],
+ cursor:{size:36,clicks:[5,6,7,8],keys:[[0,520,240],[3.8,520,240],[4.8,-290,12],[5.8,-90,12],[6.8,110,12],[7.8,310,12],[9,540,230]]}});
+</script>

@@ -50,6 +50,6 @@ Browser checks need Chrome and local networking. Automated tests use controlled 
 
 ## Demo
 
-Video: link will be added after recording is complete.
+[Watch or download the 2:17 demo](demo/offerletter-demo.mp4). It uses fictional details, actual app and Greenhouse recordings, a local Muse model, and the motion-graphics engine requested for the edit. No employer application was submitted.
 
 The demo model was verified against a public posting using both fit-check and screening paths. Demo notes document the final recording, model, limitations and exact employer pages used.

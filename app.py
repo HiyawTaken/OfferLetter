@@ -961,7 +961,7 @@ def preparation_policy(fit,rules):
 
 def run_is_pausing(run_id):
     with db() as c: row=c.execute('SELECT status FROM runs WHERE id=?',(run_id,)).fetchone()
-    return not row or row['status']=='pausing'
+    return not row or row['status']!='running'
 
 async def read_posting(url):
     """The posting's visible text, read in Chrome so pages built by scripts render. '' when it can't be read."""

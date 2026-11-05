@@ -229,6 +229,10 @@ tr.high-stakes td:first-child{font-weight:500;box-shadow:inset 2px 0 0 var(--war
 @keyframes rise{from{opacity:0;transform:translateY(8px)}}
 .modal-close{position:absolute;top:16px;right:16px}
 .modal-card h2{font-size:20px;margin-bottom:4px;padding-right:32px}
+.modal-card:has(.review-table){max-width:960px}
+.review-table{table-layout:fixed}
+.review-table th:last-child,.review-table td:last-child{width:86px;white-space:nowrap;word-break:normal}
+.review-table th:first-child{width:52%}
 .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:16px 0 20px}
 .tab{appearance:none;border:0;background:none;font:inherit;font-size:14px;color:var(--mute);padding:8px 12px;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;transition:color .15s var(--ease)}
 .tab:hover{color:var(--ink)}

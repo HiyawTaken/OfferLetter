@@ -642,7 +642,7 @@ function renderReview(snapshot) {
   const container = h('div', {});
   const sensitive = /authoriz|sponsor|salary|compensation|gender|race|ethnic|hispanic|latino|veteran|disab/i;
   const tableFor = (title, items) => {
-    const table = h('table', {}, h('tr', {}, h('th', { text: 'Question' }), h('th', { text: 'Answer' }), h('th', { text: 'Required' })));
+    const table = h('table', { class: 'review-table' }, h('tr', {}, h('th', { text: 'Question' }), h('th', { text: 'Answer' }), h('th', { text: 'Required' })));
     for (const f of items || []) table.append(h('tr', { class: f.high_stakes || sensitive.test(f.label || '') ? 'high-stakes' : null },
       h('td', { text: f.label || 'Unlabeled field' }), h('td', { text: f.value || (f.files && f.files.join(', ')) || '—' }), h('td', { text: f.required ? 'Yes' : '' })));
     container.append(h('h3', { style: 'margin:18px 0 6px', text: title }), table);

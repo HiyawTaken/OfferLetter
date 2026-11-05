@@ -1,0 +1,267 @@
+[
+  {
+    "time": 0.08,
+    "effect": "click",
+    "action": "3D application card arrives"
+  },
+  {
+    "time": 0.32,
+    "effect": "click",
+    "action": "3D application card arrives"
+  },
+  {
+    "time": 0.5599999999999999,
+    "effect": "click",
+    "action": "3D application card arrives"
+  },
+  {
+    "time": 0.7999999999999999,
+    "effect": "click",
+    "action": "3D application card arrives"
+  },
+  {
+    "time": 1.04,
+    "effect": "click",
+    "action": "3D application card arrives"
+  },
+  {
+    "time": 1.28,
+    "effect": "click",
+    "action": "3D application card arrives"
+  },
+  {
+    "time": 1.475,
+    "effect": "impact",
+    "action": "Opening hook changes on beat"
+  },
+  {
+    "time": 1.52,
+    "effect": "click",
+    "action": "3D application card arrives"
+  },
+  {
+    "time": 2.951,
+    "effect": "impact",
+    "action": "Opening hook changes on beat"
+  },
+  {
+    "time": 3.879,
+    "effect": "whoosh",
+    "action": "Your details."
+  },
+  {
+    "time": 4.254,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 5.847,
+    "effect": "whoosh",
+    "action": "Again."
+  },
+  {
+    "time": 6.222,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 7.869,
+    "effect": "impact",
+    "action": "OfferLetter"
+  },
+  {
+    "time": 11.748,
+    "effect": "whoosh",
+    "action": "Build your profile."
+  },
+  {
+    "time": 12.123,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 15.683,
+    "effect": "whoosh",
+    "action": "Your actual experience."
+  },
+  {
+    "time": 16.058,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 19.672,
+    "effect": "impact",
+    "action": "Set up once."
+  },
+  {
+    "time": 21.584,
+    "effect": "whoosh",
+    "action": "Your kind of role."
+  },
+  {
+    "time": 21.959,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 25.519,
+    "effect": "whoosh",
+    "action": "Find and apply."
+  },
+  {
+    "time": 25.894,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 27.486,
+    "effect": "whoosh",
+    "action": "Find the fit."
+  },
+  {
+    "time": 27.861,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 33.388,
+    "effect": "whoosh",
+    "action": "Look closer."
+  },
+  {
+    "time": 33.763,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 37.322,
+    "effect": "whoosh",
+    "action": "Read beyond the title."
+  },
+  {
+    "time": 37.697,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 39.344,
+    "effect": "impact",
+    "action": "Search. Screen."
+  },
+  {
+    "time": 41.256,
+    "effect": "whoosh",
+    "action": "Less copy."
+  },
+  {
+    "time": 41.631,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 43.224,
+    "effect": "whoosh",
+    "action": "Less paste."
+  },
+  {
+    "time": 43.599,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 47.158,
+    "effect": "whoosh",
+    "action": "More progress."
+  },
+  {
+    "time": 47.533,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 51.093,
+    "effect": "whoosh",
+    "action": "Watch it work."
+  },
+  {
+    "time": 51.468,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 53.06,
+    "effect": "whoosh",
+    "action": "One new question."
+  },
+  {
+    "time": 53.435,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 56.994,
+    "effect": "whoosh",
+    "action": "You choose what to reuse."
+  },
+  {
+    "time": 57.369,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 60.984,
+    "effect": "impact",
+    "action": "Answer. Remember."
+  },
+  {
+    "time": 62.896,
+    "effect": "whoosh",
+    "action": "Check the details."
+  },
+  {
+    "time": 63.271,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 68.797,
+    "effect": "whoosh",
+    "action": "Your approval comes first."
+  },
+  {
+    "time": 69.172,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 74.754,
+    "effect": "impact",
+    "action": "Your final say."
+  },
+  {
+    "time": 78.634,
+    "effect": "whoosh",
+    "action": "Find."
+  },
+  {
+    "time": 79.009,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 80.601,
+    "effect": "whoosh",
+    "action": "Fill."
+  },
+  {
+    "time": 80.976,
+    "effect": "click",
+    "action": "UI microcut settles"
+  },
+  {
+    "time": 82.623,
+    "effect": "impact",
+    "action": "OfferLetter"
+  }
+]

@@ -1,33 +1,25 @@
-# OfferLetter demo narration
+# OfferLetter montage narration
 
-## Your job search. Your final say.
+Conversational script; Ava Multilingual neural voice, normal pitch, +2% rate.
 
-Applying for jobs should not mean typing the same answers, over and over. Meet OfferLetter: a local-first assistant that helps you find relevant roles, prepare applications, and stay in control.
+**0.4s** — You found the job. Now comes the same form. Again.
 
-## 01 / Set up once
+**8.0s** — That's why we built OfferLetter.
 
-Start with the information you already know. Your contact details, work eligibility, education, graduation date, and resume. Then choose the roles and career stage you actually want. This demo uses a fictional student profile. Your preferences guide the search, instead of filling your tracker with every job online.
+**12.0s** — Start with your education and work experience. What you did, where you worked, and when.
 
-## 02 / Find and apply
+**21.8s** — Then pick the roles you're looking for. That's what guides the search.
 
-From Home, one button starts the workflow. OfferLetter searches job sources, narrows listings against your preferences, and shows its progress as it works. You can pause the run whenever you need to. The tracker keeps the work organized, with clear status labels and pay information when available.
+**28.0s** — OfferLetter finds jobs and checks what they're actually asking for. A matching title is just the start.
 
-## 03 / Read beyond the title
+**36.4s** — Close match? You get to decide.
 
-A matching title is only the beginning. The configured model reads the description and checks the work and experience level. Clear matches can continue, neighboring roles come back for your decision, and unsuitable roles are skipped with a reason. You can inspect those decisions instead of trusting a mystery score.
+**41.6s** — And this? That's a real application being filled in. Your contact details. Education. All that repeated typing.
 
-## 04 / A real application, filled locally
+**53.4s** — A new question comes up? Answer it once. You choose when it's reused, even if it's just for this job.
 
-Now watch a real Greenhouse application. OfferLetter opens the employer's form in Chrome and fills the details it recognizes from the saved profile. The same workflow can attach the selected resume and work with dropdowns. You can watch the form as it changes. Unfamiliar controls and unanswered questions still need your attention.
+**63.3s** — Before anything goes out, check the details. Review your answers, including the sensitive ones.
 
-## 05 / Ask once. Remember with permission.
+**71.0s** — Nothing gets submitted until you approve. You're still in control.
 
-When the application asks something new, it appears on Home. Give your answer, choose where it may be reused, and save. OfferLetter sends that answer to the open form and remembers it within that scope. Company-specific questions can stay limited to one job.
-
-## 06 / Review before submission
-
-Before submitting, review the captured answers and the form itself. Sensitive answers are highlighted so they are easy to check. The submission control requires explicit approval. This recording stops here: no employer application is submitted. If a form or challenge cannot be handled, it returns to you.
-
-## OfferLetter / Less repetition. More control.
-
-The Assistant helps explain what needs you next, using the current search and application state. OfferLetter brings searching, screening, filling, questions, and review into one workspace. The demo runs with a local model and fictional details. Less repeated typing. A clearer job search. And the final decision stays yours.
+**79.1s** — Less copy and paste. More time for your next move. That's OfferLetter.

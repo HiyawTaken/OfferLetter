@@ -1,0 +1,255 @@
+[
+  {
+    "kind": "g",
+    "start": 0,
+    "duration": 3.9344262295082095,
+    "title": "THE SAME FORM.",
+    "sub": "Again.",
+    "mode": "stack",
+    "index": 0
+  },
+  {
+    "kind": "v",
+    "start": 3.9344262295082095,
+    "duration": 1.9672131147541048,
+    "title": "Your details.",
+    "sub": "SET UP ONCE",
+    "mode": "profile",
+    "index": 1,
+    "file": "clip-1.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 5.901639344262314,
+    "duration": 1.9672131147541048,
+    "title": "Again.",
+    "sub": "REPEATED TYPING",
+    "mode": "repeat",
+    "index": 2,
+    "file": "clip-2.mp4"
+  },
+  {
+    "kind": "g",
+    "start": 7.868852459016419,
+    "duration": 3.9344262295082095,
+    "title": "OfferLetter",
+    "sub": "Your next move.",
+    "mode": "brand",
+    "index": 3
+  },
+  {
+    "kind": "v",
+    "start": 11.803278688524628,
+    "duration": 3.9344262295082095,
+    "title": "Build your profile.",
+    "sub": "EDUCATION",
+    "mode": "setup",
+    "index": 4,
+    "file": "clip-4.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 15.737704918032838,
+    "duration": 3.9344262295082095,
+    "title": "Your actual experience.",
+    "sub": "WORK HISTORY",
+    "mode": "setup",
+    "index": 5,
+    "file": "clip-5.mp4"
+  },
+  {
+    "kind": "g",
+    "start": 19.672131147541048,
+    "duration": 1.9672131147541048,
+    "title": "Set up once.",
+    "sub": "Bring your experience with you.",
+    "mode": "stack",
+    "index": 6
+  },
+  {
+    "kind": "v",
+    "start": 21.639344262295154,
+    "duration": 3.9344262295082095,
+    "title": "Your kind of role.",
+    "sub": "SEARCH PREFERENCES",
+    "mode": "preferences",
+    "index": 7,
+    "file": "clip-7.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 25.573770491803362,
+    "duration": 1.9672131147541048,
+    "title": "Find and apply.",
+    "sub": "ONE WORKSPACE",
+    "mode": "search",
+    "index": 8,
+    "file": "clip-8.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 27.540983606557468,
+    "duration": 5.901639344262314,
+    "title": "Find the fit.",
+    "sub": "LIVE SEARCH \u2022 CONDENSED",
+    "mode": "search",
+    "index": 9,
+    "file": "clip-9.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 33.44262295081978,
+    "duration": 3.9344262295082095,
+    "title": "Look closer.",
+    "sub": "ROLE SCREENING \u2022 CONDENSED",
+    "mode": "search",
+    "index": 10,
+    "file": "clip-10.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 37.377049180327994,
+    "duration": 1.9672131147541048,
+    "title": "Read beyond the title.",
+    "sub": "SCREENING & QUESTIONS",
+    "mode": "questions",
+    "index": 11,
+    "file": "clip-11.mp4"
+  },
+  {
+    "kind": "g",
+    "start": 39.344262295082096,
+    "duration": 1.9672131147541048,
+    "title": "Search. Screen.",
+    "sub": "Keep moving.",
+    "mode": "scan",
+    "index": 12
+  },
+  {
+    "kind": "v",
+    "start": 41.3114754098362,
+    "duration": 1.9672131147541048,
+    "title": "Less copy.",
+    "sub": "REAL GREENHOUSE FOOTAGE",
+    "mode": "form",
+    "index": 13,
+    "file": "clip-13.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 43.2786885245903,
+    "duration": 3.9344262295082095,
+    "title": "Less paste.",
+    "sub": "PROFILE FIELDS",
+    "mode": "form",
+    "index": 14,
+    "file": "clip-14.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 47.21311475409851,
+    "duration": 3.9344262295082095,
+    "title": "More progress.",
+    "sub": "EDUCATION FIELDS",
+    "mode": "form",
+    "index": 15,
+    "file": "clip-15.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 51.147540983606724,
+    "duration": 1.9672131147541048,
+    "title": "Watch it work.",
+    "sub": "CONDENSED RECORDING",
+    "mode": "form",
+    "index": 16,
+    "file": "clip-16.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 53.11475409836083,
+    "duration": 3.9344262295082095,
+    "title": "One new question.",
+    "sub": "ANSWER IN OFFERLETTER",
+    "mode": "answer",
+    "index": 17,
+    "file": "clip-17.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 57.04918032786904,
+    "duration": 3.9344262295082095,
+    "title": "You choose what to reuse.",
+    "sub": "THIS JOB ONLY",
+    "mode": "answer",
+    "index": 18,
+    "file": "clip-18.mp4"
+  },
+  {
+    "kind": "g",
+    "start": 60.98360655737725,
+    "duration": 1.9672131147541048,
+    "title": "Answer. Remember.",
+    "sub": "On your terms.",
+    "mode": "scan",
+    "index": 19
+  },
+  {
+    "kind": "v",
+    "start": 62.95081967213135,
+    "duration": 5.901639344262314,
+    "title": "Check the details.",
+    "sub": "REVIEW BEFORE SUBMITTING",
+    "mode": "review",
+    "index": 20,
+    "file": "clip-20.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 68.85245901639367,
+    "duration": 5.901639344262314,
+    "title": "Your approval comes first.",
+    "sub": "NO APPLICATION SUBMITTED",
+    "mode": "review",
+    "index": 21,
+    "file": "clip-21.mp4"
+  },
+  {
+    "kind": "g",
+    "start": 74.75409836065597,
+    "duration": 3.9344262295082095,
+    "title": "Your final say.",
+    "sub": "Local-first. Approval-first.",
+    "mode": "shield",
+    "index": 22
+  },
+  {
+    "kind": "v",
+    "start": 78.68852459016418,
+    "duration": 1.9672131147541048,
+    "title": "Find.",
+    "sub": "OFFERLETTER",
+    "mode": "search",
+    "index": 23,
+    "file": "clip-23.mp4"
+  },
+  {
+    "kind": "v",
+    "start": 80.65573770491828,
+    "duration": 1.9672131147541048,
+    "title": "Fill.",
+    "sub": "OFFERLETTER",
+    "mode": "form",
+    "index": 24,
+    "file": "clip-24.mp4"
+  },
+  {
+    "kind": "g",
+    "start": 82.62295081967238,
+    "duration": 7.868852459016419,
+    "title": "OfferLetter",
+    "sub": "Make your next move.",
+    "mode": "close",
+    "index": 25
+  }
+]

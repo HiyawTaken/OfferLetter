@@ -1,0 +1,23 @@
+{
+  "duration": "90.499349",
+  "video_duration": "90.499349",
+  "size": "24851353",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "frame_rate": "30/1",
+  "audio": {
+    "input_i": "-16.17",
+    "input_tp": "-4.15",
+    "input_lra": "2.50",
+    "input_thresh": "-26.23",
+    "output_i": "-15.97",
+    "output_tp": "-4.00",
+    "output_lra": "2.50",
+    "output_thresh": "-26.02",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.03"
+  },
+  "full_decode": "passed"
+}

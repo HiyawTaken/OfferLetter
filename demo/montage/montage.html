@@ -1,53 +1,105 @@
-<!doctype html><html><head><meta charset="utf-8"><style>
-@font-face{font-family:Geist;src:url(geist.woff2)}*{box-sizing:border-box}body{margin:0;background:#080d0c;color:#f6f8f1;font-family:Geist;overflow:hidden;width:1920px;height:1080px}#world{position:absolute;inset:0}#stage{position:absolute;inset:0;perspective:1800px;background:transparent}#footage{position:absolute;left:160px;top:225px;width:1600px;height:780px;transform-style:preserve-3d;border-radius:22px;box-shadow:0 35px 90px #0009;overflow:hidden;border:2px solid #ffffff35;background:#fafafa}video{position:absolute;width:1600px;height:780px;top:0px;object-fit:contain}#top{position:absolute;top:51px;left:72px;right:72px;display:flex;justify-content:space-between;font-size:19px;letter-spacing:3px;color:#bed1c7}#brand{color:#f6f8f1;font-weight:650;letter-spacing:-1px;font-size:28px}#title{position:absolute;left:110px;top:108px;font-size:73px;font-weight:650;letter-spacing:-3.5px;line-height:1.03;white-space:nowrap;transform-origin:0 50%}#subtitle{position:absolute;left:115px;top:199px;font-size:21px;letter-spacing:3px;color:#b5f99b}#bottom{position:absolute;bottom:28px;left:72px;right:72px;display:flex;justify-content:space-between;font-size:15px;letter-spacing:2px;color:#8fa69a}#line{position:absolute;bottom:0;height:5px;background:#b5f99b}#wipe{position:absolute;inset:0;background:#b5f99b;transform:translateX(-100%)}#letter{position:absolute;bottom:130px;right:145px;font-size:23px;color:#b5f99b}#corners{position:absolute;inset:27px;border:1px solid #b5f99b15;pointer-events:none}#count{font-size:18px;letter-spacing:2px}
-</style></head><body><div id="world"></div><div id="stage"><div id="footage"></div></div><div id="corners"></div><div id="top"><span id="brand">OfferLetter<span style="color:#b5f99b"> ↗</span></span><span id="count">YOUR NEXT MOVE</span></div><div id="title"></div><div id="subtitle"></div><div id="letter"></div><div id="bottom"><span>FICTIONAL DEMO • REAL APP FOOTAGE</span><span id="note">LOCAL-FIRST JOB SEARCH</span></div><div id="line"></div><div id="wipe"></div><script src="motion.js"></script><script type="module">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>OfferLetter — application demo</title><style>
+/* Design pass using unslop by Damir Sokolovsky, https://github.com/heydamir/unslop (CC BY 4.0).
+   Application paperwork, one ink accent, real footage. Text is a flowing stack, never independent y offsets. */
+@font-face{font-family:Geist;src:url(geist.woff2)}
+*{box-sizing:border-box}body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#f7f4ee;color:#242821;font-family:Geist,sans-serif}
+#brand{position:absolute;left:96px;top:48px;display:flex;align-items:center;gap:12px;font-size:28px;font-weight:500;line-height:40px}
+#brand svg{width:28px;height:28px;stroke:#315846;fill:none;stroke-width:1.5}
+#chapter{position:absolute;right:96px;top:56px;color:#64665f;font-size:24px;line-height:32px}
+#copy{position:absolute;left:96px;top:328px;width:808px;display:flex;flex-direction:column;gap:28px;transform-origin:left center}
+#title{margin:0;font-size:104px;line-height:1.08;font-weight:500;letter-spacing:-3px;white-space:pre-line;overflow-wrap:normal}
+#subtitle{margin:0;font-size:32px;line-height:44px;font-weight:400;letter-spacing:0;color:#62665d;white-space:pre-line}
+#world{position:absolute;left:960px;top:192px;width:864px;height:720px;overflow:hidden}
+#footage{position:absolute;left:96px;top:240px;width:1728px;height:752px;overflow:hidden;background:#fafafa;border:1px solid #2528211a;border-radius:12px}
+video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+#footer{position:absolute;left:96px;right:96px;bottom:32px;display:flex;justify-content:space-between;font-size:18px;line-height:24px;color:#6a6d64}
+#url{position:absolute;left:96px;bottom:176px;font-size:28px;line-height:40px;color:#315846}
+#progress{position:absolute;bottom:0;left:0;height:4px;background:#315846;transform-origin:left;width:1920px}
+body.ui #copy{top:112px;width:1728px;gap:12px}
+body.ui #title{font-size:60px;line-height:68px;letter-spacing:-1.6px}
+body.ui #subtitle{font-size:24px;line-height:32px}
+body.ink{background:#252b25;color:#f7f4ee}body.ink #brand svg{stroke:#c6d2b9}body.ink #subtitle,body.ink #chapter,body.ink #footer{color:#bac0b4}body.ink #url{color:#d1d9c6}body.ink #progress{background:#b1bfa3}
+</style></head><body>
+<div id="brand"><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>OfferLetter</div>
+<div id="chapter"></div><main id="copy"><h1 id="title"></h1><p id="subtitle"></p></main><div id="world"></div><div id="footage"></div><div id="url"></div>
+<div id="footer"><span id="disclosure">Fictional profile · Recorded app footage</span><span id="credit"></span></div><div id="progress"></div>
+<script type="module">
 import * as THREE from './three.module.js';
-const shots=await (await fetch('timeline.json')).json();const grid=await(await fetch('grid.json')).json();
-const $=id=>document.getElementById(id);const footage=$('footage'),title=$('title'),subtitle=$('subtitle');
+const shots=await(await fetch('timeline.json')).json(),grid=await(await fetch('grid.json')).json();
+const $=id=>document.getElementById(id),title=$('title'),sub=$('subtitle'),copy=$('copy'),world=$('world'),footage=$('footage');
+const ease=x=>1-Math.pow(1-Math.max(0,Math.min(1,x)),3);
+const words={
+ 1:['Your details','Enter them once'],2:['The same details','On another application'],
+ 3:['OfferLetter','Find roles. Prepare applications.\nReview before submitting.'],
+ 4:['Start with your education','Your profile'],5:['Add your work history','Roles, dates and responsibilities'],
+ 6:['Your experience,\nin one place','Use it across your applications'],7:['Choose the roles you want','Search preferences'],
+ 8:['Find and apply','Start a search'],9:['Find relevant roles','Live search · Condensed recording'],
+ 10:['Check the requirements','Role screening · Condensed recording'],11:['Decide on close matches','Questions return to you'],
+ 12:['From search\nto application','Find roles → Check requirements'],
+ 13:['Fill the application','Real Greenhouse footage'],14:['Reuse your contact details','Saved profile fields'],
+ 15:['Fill education fields','Condensed form recording'],16:['Follow the form','Visible browser automation'],
+ 17:['Answer a new question','Reply in OfferLetter'],18:['Choose when to reuse it','This job only'],
+ 19:['An answer,\nwith a scope','Reuse only where you choose'],20:['Review the answers','Check before submitting'],
+ 21:['Approve it yourself','No application submitted in this demo'],22:['Ready for\nyour review','Submission waits for your approval'],
+ 23:['Find roles','OfferLetter'],24:['Prepare applications','OfferLetter'],
+ 25:['OfferLetter','Less repeated typing.\nYour approval before submission.']};
 const videos={};for(const s of shots)if(s.kind==='v'){let v=document.createElement('video');v.src=s.file;v.muted=true;v.preload='auto';v.style.display='none';footage.appendChild(v);videos[s.index]=v;}
 await Promise.all(Object.values(videos).map(v=>new Promise(r=>{if(v.readyState>=2)r();else v.onloadeddata=r})));await document.fonts.ready;
-const scene=new THREE.Scene();scene.background=new THREE.Color('#080d0c');scene.fog=new THREE.Fog('#080d0c',12,28);
-const camera=new THREE.PerspectiveCamera(40,1920/1080,.1,100);camera.position.set(0,0,13);
-const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setSize(1920,1080);renderer.setPixelRatio(1);renderer.setClearColor('#080d0c');renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.35;$('world').appendChild(renderer.domElement);
-scene.add(new THREE.HemisphereLight(0xd9ffe7,0x16282a,2));const key=new THREE.DirectionalLight(0xffffff,5);key.position.set(-4,6,6);scene.add(key);const fill=new THREE.PointLight(0x9dff76,65,25);fill.position.set(6,2,4);scene.add(fill);const rim=new THREE.PointLight(0x91d5ff,45,25);rim.position.set(-5,-1,2);scene.add(rim);
-const mint=new THREE.MeshStandardMaterial({color:0xb5f99b,metalness:.65,roughness:.22});const dark=new THREE.MeshStandardMaterial({color:0x1f3931,metalness:.8,roughness:.25});const silver=new THREE.MeshStandardMaterial({color:0xd6e4da,metalness:.78,roughness:.2});
-const root=new THREE.Group();scene.add(root);let cards=[];
-function cardTexture(label){const c=document.createElement('canvas');c.width=768;c.height=480;const x=c.getContext('2d');x.fillStyle='#e9eee9';x.fillRect(0,0,768,480);x.fillStyle='#132a20';x.font='600 40px Geist';x.fillText(label,42,70);x.fillStyle='#64766b';x.font='22px Geist';x.fillText('APPLICATION / YOUR PROFILE',42,112);for(let j=0;j<4;j++){x.fillStyle='#c7d4cb';x.fillRect(42,155+j*65,640,44);x.fillStyle='#8ca695';x.fillRect(58,169+j*65,240+j*65,12)}const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;}
-for(let i=0;i<7;i++){const g=new THREE.Group();const body=new THREE.Mesh(new THREE.BoxGeometry(4.35,2.72,.09),dark);g.add(body);const p=new THREE.Mesh(new THREE.PlaneGeometry(4.3,2.68),new THREE.MeshStandardMaterial({map:cardTexture(['Experience','Education','Your resume','Work history','Contact details','Your next role','Application'][i]),roughness:.7,metalness:.05}));p.position.z=.052;g.add(p);root.add(g);cards.push(g);}
-const rings=new THREE.Group();root.add(rings);for(let i=0;i<3;i++){let mesh=new THREE.Mesh(new THREE.TorusGeometry(2.25+i*.32,.095,20,128),i===1?silver:mint);rings.add(mesh)}
-const chip=new THREE.Group();root.add(chip);chip.add(new THREE.Mesh(new THREE.BoxGeometry(2.5,2.5,.35),dark));const core=new THREE.Mesh(new THREE.BoxGeometry(1.7,1.7,.45),mint);chip.add(core);for(let i=0;i<7;i++)for(let side=0;side<4;side++){let pin=new THREE.Mesh(new THREE.BoxGeometry(.12,.5,.12),silver);pin.position.set((i-3)*.32,1.46,0);let gp=new THREE.Group();gp.rotation.z=side*Math.PI/2;gp.add(pin);chip.add(gp)}
-const cubes=[];const lattice=new THREE.Group();root.add(lattice);for(let i=0;i<45;i++){let c=new THREE.Mesh(new THREE.BoxGeometry(.43,.43,.43),i%4===0?mint:dark);c.userData={x:(i%9-4)*.64,y:(Math.floor(i/9)-2)*.64};c.position.set(c.userData.x,c.userData.y,0);lattice.add(c);cubes.push(c)}
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(38,864/720,.1,50);camera.position.set(0,0,11);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});renderer.setSize(864,720);renderer.setPixelRatio(1.5);renderer.setClearColor(0,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;world.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffffff,0x98938a,2));const light=new THREE.DirectionalLight(0xffffff,2.8);light.position.set(-4,6,8);scene.add(light);
+const paper=new THREE.MeshStandardMaterial({color:0xfdfbf7,roughness:.95,metalness:0});const folderMat=new THREE.MeshStandardMaterial({color:0x87967b,roughness:.9,metalness:0,side:THREE.DoubleSide});
+const root=new THREE.Group();scene.add(root);
+function texture(heading,labels){const c=document.createElement('canvas');c.width=960;c.height=1200;const x=c.getContext('2d');x.fillStyle='#fdfbf7';x.fillRect(0,0,960,1200);x.fillStyle='#315846';x.fillRect(64,64,56,8);x.fillStyle='#242821';x.font='500 60px Geist';x.fillText(heading,64,172);x.font='32px Geist';x.fillStyle='#62665d';x.fillText('OfferLetter / Fictional demo',64,236);labels.forEach((label,i)=>{let y=348+i*180;x.fillStyle='#242821';x.font='500 34px Geist';x.fillText(label,64,y);x.fillStyle='#d9dcd4';x.fillRect(64,y+32,760,2);x.fillStyle='#90988a';x.fillRect(64,y+64,480-i*56,10);x.fillRect(64,y+96,640-i*64,10)});const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;return tex;}
+const papers=[];const texts=[['Experience',['Example Research Lab','Data Engineering Intern','May–August 2026']],['Education',['Example State University','Computer Science','May 2027']],['Application',['Contact details','Work history','Review answers']]];
+for(const [heading,labels] of texts){const g=new THREE.Group();g.add(new THREE.Mesh(new THREE.BoxGeometry(3.7,4.65,.035),paper));let face=new THREE.Mesh(new THREE.PlaneGeometry(3.68,4.63),new THREE.MeshStandardMaterial({map:texture(heading,labels),roughness:1,metalness:0}));face.position.z=.021;g.add(face);root.add(g);papers.push(g);}
+const envelope=new THREE.Group();root.add(envelope);
+const back=new THREE.Mesh(new THREE.BoxGeometry(5.4,3.45,.09),folderMat);envelope.add(back);
+function triangle(points,material){const geom=new THREE.BufferGeometry();geom.setAttribute('position',new THREE.Float32BufferAttribute(points.flat(),3));geom.computeVertexNormals();return new THREE.Mesh(geom,material);}
+const foldMat=new THREE.MeshStandardMaterial({color:0xa8b59a,roughness:.95,side:THREE.DoubleSide});
+const flapPivot=new THREE.Group();flapPivot.position.set(0,1.72,.08);envelope.add(flapPivot);flapPivot.add(triangle([[-2.7,0,0],[0,-1.8,0],[2.7,0,0]],foldMat));
+const front=triangle([[-2.7,-1.72,.1],[2.7,-1.72,.1],[0,.45,.1]],new THREE.MeshStandardMaterial({color:0x9caa8f,roughness:1,side:THREE.DoubleSide}));envelope.add(front);
+const loader=new THREE.TextureLoader();const proof=await loader.loadAsync('review-proof.png');proof.colorSpace=THREE.SRGBColorSpace;
+const review=new THREE.Mesh(new THREE.PlaneGeometry(5.5,3.6),new THREE.MeshBasicMaterial({map:proof}));root.add(review);
+const bounds=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height}};
 let current=-1;
 window.seek=async t=>{
- t=Math.max(0,Math.min(grid.duration-.001,t));const s=shots.find(s=>t>=s.start&&t<s.start+s.duration)||shots.at(-1);const u=t-s.start,p=u/s.duration;const enter=M.S(u,17,.87);const exit=M.eo((u-s.duration+.19)/.19);
- if(current!==s.index){for(const v of Object.values(videos))v.style.display='none';current=s.index;title.textContent=s.title;subtitle.textContent=s.sub;}
- title.style.opacity=Math.min(1,u/.1);title.style.transform=`translateY(${(1-enter)*60}px) scale(${1+.015*p})`;title.style.filter=`blur(${Math.max(0,1-enter)*12}px)`;
- $('line').style.width=`${t/grid.duration*1920}px`;$('count').textContent=String(s.index+1).padStart(2,'0')+' / YOUR NEXT MOVE';$('note').textContent=s.mode==='review'?'0 APPLICATIONS SUBMITTED':'LOCAL-FIRST • YOU STAY IN CONTROL';
- $('wipe').style.transform=`translateX(${u>.0&&u<.17?(-100+u/.17*220):130}%)`;$('wipe').style.opacity=u<.17?.8:0;
- for(const ob of [rings,chip,lattice,...cards])ob.visible=false;
- root.rotation.set(0,0,0);root.position.set(0,0,0);root.scale.setScalar(1);camera.position.set(0,0,13);camera.lookAt(0,0,0);
+ t=Math.max(0,Math.min(grid.duration-.001,t));const s=shots.find(s=>t>=s.start&&t<s.start+s.duration)||shots.at(-1),u=t-s.start,p=u/s.duration,e=ease(u/.32);
+ const ink=s.mode==='brand'||s.mode==='close';document.body.className=s.kind==='v'?'ui':ink?'ink':'';
+ if(current!==s.index){for(const v of Object.values(videos))v.style.display='none';current=s.index;}
+ let [heading,caption]=words[s.index]||['Found the job','Now comes the application'];
+ if(s.index===0){const b=Math.min(2,Math.floor(u/(grid.beat*3)));heading=['Found the job','Now the form','Again'][b];caption=['Then the application','The same details to enter','Let’s change that'][b];}
+ title.textContent=heading;sub.textContent=caption;title.style.fontSize=s.kind==='v'?'60px':s.index===0&&heading==='Again'?'152px':s.mode==='brand'||s.mode==='close'?'124px':'96px';
+ copy.style.transform=`translateY(${(1-e)*12}px)`;copy.style.opacity=e;
+ $('chapter').textContent=s.kind==='v'?(s.mode==='review'?'Review':s.mode==='form'?'Application':s.mode==='answer'?'Questions':s.start<25?'Profile':'Search'):'';
+ $('url').textContent=s.mode==='close'?'github.com/HiyawTaken/OfferLetter':'';
+ $('credit').textContent=s.mode==='close'?'unslop by @heydamir':'';
+ $('disclosure').textContent=s.mode==='review'?'Fictional profile · No application submitted':'Fictional profile · Recorded app footage';
+ $('progress').style.transform=`scaleX(${t/grid.duration})`;
+ papers.forEach(o=>{o.visible=false;o.scale.setScalar(1)});envelope.visible=review.visible=false;root.position.set(0,0,0);root.rotation.set(0,0,0);root.scale.setScalar(1);
  if(s.kind==='v'){
-  $('world').style.display='none';footage.style.display='block';const v=videos[s.index];v.style.display='block';const target=Math.min(u,v.duration-.035);
-  if(Math.abs(v.currentTime-target)>.002)await new Promise(resolve=>{v.onseeked=resolve;v.currentTime=target;});
-  title.style.top='103px';title.style.left='110px';title.style.fontSize='68px';subtitle.style.top='180px';subtitle.style.left='115px';subtitle.style.fontSize='17px';
-  // Begin with a quick perspective swing; settle onto a readable live action close-up.
-  const rot=(s.index%2?1:-1)*(1-enter)*7;const pulse=(s.duration>3&&u>grid.bar)?Math.exp(-(u-grid.bar)*8)*.05:0;const z=1.0+.018*p+pulse;
-  footage.style.transform=`translateX(${(1-enter)*(s.index%2?130:-130)}px) rotateY(${rot}deg) rotateX(${(1-enter)*5}deg) scale(${z})`;
-  footage.style.opacity=Math.min(1,.35+u*9);$('letter').textContent='';
+  world.style.display='none';footage.style.display='block';const v=videos[s.index];v.style.display='block';const target=Math.min(u,v.duration-.035);if(Math.abs(v.currentTime-target)>.002)await new Promise(r=>{v.onseeked=r;v.currentTime=target});
+  footage.style.transform=`translateY(${(1-e)*16}px)`;footage.style.opacity=.5+.5*e;
  }else{
-  $('world').style.display='block';footage.style.display='none';title.style.top='435px';title.style.left='105px';title.style.fontSize=s.mode==='close'||s.mode==='brand'?'148px':'105px';subtitle.style.top='565px';subtitle.style.left='112px';subtitle.style.fontSize='27px';
-  root.position.x=3.4;root.position.y=-.1;root.rotation.y=-.4+t*.09;root.rotation.z=.08*Math.sin(t);
-  if(s.mode==='stack'){root.rotation.y=-.32+u*.12;title.style.top='390px';title.style.fontSize='91px';subtitle.style.top='510px';cards.forEach((c,i)=>{c.visible=true;const e=M.S(u-i*.24,16,.82);c.position.set((i-3)*.25,(i-3)*.24,(i-3)*.45+(1-e)*12);c.rotation.set(-.15+i*.025,-.18+u*.05,-.12+i*.04)});root.scale.setScalar(.95);root.position.x=3.9;
-   if(s.index===0){const b=Math.floor(u/(grid.beat*3));title.textContent=['Found the job.','Now the form.','Again.'][Math.min(2,b)];subtitle.textContent=b<2?'You know the drill.':'Let’s change that.';title.style.fontSize=b>=2?'158px':'102px';const snap=u%(grid.beat*3);title.style.transform=`translateX(${(1-M.S(snap,24,.85))*90}px)`;}
+  world.style.display='block';footage.style.display='none';root.rotation.set(-.12,-.2+.25*ease(p),-.05);root.scale.setScalar(.96);
+  if(s.mode==='stack'){
+   papers.forEach((o,i)=>{o.visible=true;const enter=ease((u-i*.24)/.48);o.position.set((i-1)*.48+(1-enter)*3.2,(i-1)*.18,(i-1)*.16);o.rotation.set(0,0,(i-1)*.06)});
+  }else if(s.mode==='brand'||s.mode==='close'){
+   envelope.visible=true;flapPivot.rotation.x=-Math.PI*.72*ease(u/.8);
+   papers[0].visible=true;papers[0].position.set(0,.6+ease((u-.32)/.8)*.8,-.08);papers[0].rotation.set(0,0,0);papers[0].scale.setScalar(.84);
+   envelope.position.set(0,-1.08,.18);root.rotation.z=-.08+.12*ease(p);
+  }else if(s.mode==='scan'){
+   papers.forEach((o,i)=>{o.visible=true;o.scale.setScalar(.8);o.position.set((i-1)*1.2,(i-1)*.2,(i-1)*.16);o.rotation.set(0,-.2+i*.12,(i-1)*.08)});root.rotation.y=-.24+.25*ease(p);
+  }else if(s.mode==='shield'){
+   review.visible=true;review.position.set(0,0,.1);root.rotation.set(0,-.12+.12*ease(p),0);
   }
-  if(s.mode==='brand'||s.mode==='close'){rings.visible=chip.visible=true;rings.rotation.set(t*.48,t*.27,t*.12);rings.children.forEach((r,i)=>r.rotation.set(i*.8+t*.08,i*.6,0));chip.rotation.set(.25,t*.35,-.25);root.position.x=4;root.scale.setScalar(.93+.04*Math.sin(u));$('letter').textContent=s.mode==='close'?'github.com/HiyawTaken/OfferLetter':'';
-   if(s.mode==='close'&&u<grid.bar){title.textContent='Your next move.';title.style.fontSize='104px';subtitle.textContent='Less repetition. More possibility.';}else if(s.mode==='close'){title.textContent='OfferLetter';subtitle.textContent='Make your next move.';}
-  }
-  if(s.mode==='scan'){lattice.visible=true;lattice.rotation.set(-.3,.6,-.2);cubes.forEach((c,i)=>{c.position.z=Math.sin(i*.6-u*5)*.65;c.rotation.y=t*.4});root.position.x=4;}
-  if(s.mode==='shield'){rings.visible=true;rings.rotation.set(.3,t*.25,.1);chip.visible=true;chip.rotation.set(.15,t*.3,.4);root.position.x=4;}
   renderer.render(scene,camera);
  }
+ // Structural layout validation runs at every encoded frame, not only at selected stills.
+ const a=bounds(title),b=bounds(sub),c=bounds(copy),visual=bounds(s.kind==='v'?footage:world);
+ const issues=[];if(b.y-a.bottom<11)issues.push('headline/subtitle gap');if(c.x<72||c.right>1848||c.y<96||c.bottom>904)issues.push('copy safe area');
+ if(s.kind==='v'&&c.bottom>visual.y-16)issues.push('copy/footage overlap');if(s.kind==='g'&&c.right>visual.x-40)issues.push('copy/3D overlap');
+ for(const el of [title,sub])if(el.scrollWidth>el.clientWidth+2)issues.push('text overflow');
+ window.layoutCheck={t,shot:s.index,issues,gap:b.y-a.bottom,copy:c};if(issues.length)throw Error('Layout '+JSON.stringify(window.layoutCheck));
 };window.VIDEO={w:1920,h:1080,duration:grid.duration};window.ready=true;await window.seek(.6);
 </script></body></html>
-
-

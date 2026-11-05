@@ -1,16 +1,13 @@
-# OfferLetter montage — November 4, 2026
+# OfferLetter demo — unslop revision
 
-90.49 seconds, 1920 × 1080, 30 fps, H.264 / AAC stereo. Replaces the earlier 2:17 walkthrough.
+90.5 seconds, 1920 × 1080, 30 fps, H.264 / AAC stereo. November 4, 2026.
 
-The edit has 26 shots, a changing opening hook, moving 3D application cards, a lit processor and orbiting rings, a depth-animated cube grid, live app footage, perspective transitions, and beat-synced cuts. The music grid is 122 BPM. Narration uses a new voice and shorter, conversational phrasing. Whooshes, impacts and clicks align to graphic transitions; music ducks under speech.
+Applied the user-requested unslop skill by Damir Sokolovsky. Replaced the processor, orbital rings and cube grid with matte application papers, an envelope and a real review preview. Removed the numbered HUD, uppercase tracked labels, lime styling and looping decoration. Captions use the actual application workflow. The 26-shot timeline, music, conversational narration and sound effects are retained; opening clicks match the three paper arrivals.
 
-All displayed account/profile details are fictional. These are the previously captured real OfferLetter and Greenhouse recordings, edited for pace; no new employer interaction was performed for this revision. Figma reached review. Verkada footage demonstrates partial form filling and is not a claim of a completed application. Search was paused during screening. No employer applications were submitted. The 3D cards and processor are illustrative graphics, not extra product screens.
+The reported overlap at three seconds is fixed structurally: headline and subtitle use a flowing text group with an explicit gap. Text and 3D footage occupy separate bounded regions. All **2,715 encoded frames** passed checks for headline/subtitle spacing, text overflow, safe bounds and overlap with the footage or 3D region. Extra rendered stills were inspected at 2.94, 3.0, 3.1, 3.5 and 3.9 seconds, as well as across the full timeline.
 
-The earlier app verification remains 108 tests plus 6 subtests and all workflow/browser checks passing. This revision changes only demo media and documentation.
+Full MP4 decode passed. Final export: -16.17 LUFS integrated; -4.10 dBTP true peak. Duration is 90.50 seconds. This verifies file integrity and measured audio levels, rather than claiming a human listening review.
 
-Export verification: entire file decoded successfully. Both video and audio run through the approximately 90.5-second timeline. Measured on the final MP4: -16.17 LUFS integrated, -4.15 dBTP true peak. Stereo and mono compatibility were checked. Sound sources and licenses are in CREDITS.md.
+All profile details are fictional. The existing real OfferLetter and Greenhouse footage is condensed for the edit. [Figma](https://job-boards.greenhouse.io/figma/jobs/6143238004) reached review; [Verkada](https://job-boards.greenhouse.io/verkada/jobs/5280545007) footage demonstrates partial form filling. No new employer interactions occurred and no applications were submitted. The original app demo used the local muse-glimmer:30b model. No product code changed in this revision.
 
-Quick review points: 0:00–0:04 opening card arrivals and changing hook; 0:08 brand impact; 0:41 real form transition; 0:53 question and saved-answer scene; 1:09 approval gate. No clipping was detected.
-
-Recorded employer pages: [Figma Software Engineer Intern](https://job-boards.greenhouse.io/figma/jobs/6143238004) and [Verkada University Graduate](https://job-boards.greenhouse.io/verkada/jobs/5280545007). The original demo used the local Ollama muse-glimmer:30b model.
-
+Credits and music/sound licenses: CREDITS.md. The design audit is in UNSLOP_REVIEW.md. The standalone music track is not redistributed.

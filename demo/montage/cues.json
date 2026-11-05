@@ -15,29 +15,9 @@
     "action": "3D application card arrives"
   },
   {
-    "time": 0.7999999999999999,
-    "effect": "click",
-    "action": "3D application card arrives"
-  },
-  {
-    "time": 1.04,
-    "effect": "click",
-    "action": "3D application card arrives"
-  },
-  {
-    "time": 1.28,
-    "effect": "click",
-    "action": "3D application card arrives"
-  },
-  {
     "time": 1.475,
     "effect": "impact",
     "action": "Opening hook changes on beat"
-  },
-  {
-    "time": 1.52,
-    "effect": "click",
-    "action": "3D application card arrives"
   },
   {
     "time": 2.951,

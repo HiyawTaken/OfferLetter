@@ -36,7 +36,7 @@ for i,s in enumerate(shots):
  ts=t if name=='impact' else t-.055
  add(sfx,samples[name],ts,.24 if name=='impact' else .14)
  cues.append({'time':round(ts,3),'effect':name,'action':shots[i]['title']})
-for i in range(7):
+for i in range(3):
  t=.24*i+.08;add(sfx,samples['click'],t,.13);cues.append({'time':t,'effect':'click','action':'3D application card arrives'})
 for t in [3*grid['beat'],6*grid['beat']]:
  add(sfx,samples['impact'],t,.13);cues.append({'time':round(t,3),'effect':'impact','action':'Opening hook changes on beat'})
@@ -46,7 +46,7 @@ write(P/'music-stem.wav',SR,music);write(P/'sfx-stem.wav',SR,sfx);write(P/'mix.w
 (P/'cues.json').write_text(json.dumps(sorted(cues,key=lambda c:c['time']),indent=2))
 OUT.mkdir(exist_ok=True)
 if (P/'silent.mp4').exists():
- subprocess.run(['ffmpeg','-v','error','-y','-i',str(P/'silent.mp4'),'-i',str(P/'mix.wav'),'-map','0:v','-map','1:a','-c:v','copy','-af','loudnorm=I=-16:TP=-4.2:LRA=9','-c:a','aac','-b:a','256k','-ar','48000','-ac','2','-t',str(D),'-movflags','+faststart',str(OUT/'offerletter-montage.mp4')],check=True)
- print('EXPORTED',OUT/'offerletter-montage.mp4',flush=True)
+ subprocess.run(['ffmpeg','-v','error','-y','-i',str(P/'silent.mp4'),'-i',str(P/'mix.wav'),'-map','0:v','-map','1:a','-c:v','copy','-af','loudnorm=I=-16:TP=-4.2:LRA=9','-c:a','aac','-b:a','256k','-ar','48000','-ac','2','-t',str(D),'-movflags','+faststart',str(OUT/'offerletter-unslop.mp4')],check=True)
+ print('EXPORTED',OUT/'offerletter-unslop.mp4',flush=True)
 else:print('Audio mix ready',flush=True)
 

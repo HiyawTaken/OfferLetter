@@ -1,0 +1,7 @@
+starlette>=0.40,<2
+uvicorn>=0.30
+playwright>=1.44
+pypdf>=5,<7
+python-multipart>=0.0.9
+keyring>=24
+python-jobspy>=1.4,<2

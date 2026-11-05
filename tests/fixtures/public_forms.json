@@ -1,0 +1,492 @@
+[
+  {
+    "source": "greenhouse",
+    "url": "https://job-boards.greenhouse.io/figma/jobs/5426468004?gh_jid=5426468004",
+    "fields": [
+      {
+        "label": "First Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Last Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Email",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Country*",
+        "type": "combobox",
+        "required": true
+      },
+      {
+        "label": "Phone",
+        "type": "tel",
+        "required": true
+      },
+      {
+        "label": "Location (City)*",
+        "type": "combobox",
+        "required": true
+      },
+      {
+        "label": "Resume/CV*",
+        "type": "file",
+        "required": true
+      },
+      {
+        "label": "LinkedIn Profile",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Other Website",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Why do you want to join Figma?",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "label": "Pronouns",
+        "type": "combobox",
+        "required": false
+      },
+      {
+        "label": "Additional Information",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "label": "From where do you intend to work? ",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Preferred First Name",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Are you authorized to work in the country for which you applied? *",
+        "type": "combobox",
+        "required": true
+      },
+      {
+        "label": "Have you ever worked for Figma before, as an employee or a contractor/consultant? *",
+        "type": "combobox",
+        "required": true
+      },
+      {
+        "label": "Gender",
+        "type": "combobox",
+        "required": false
+      },
+      {
+        "label": "Are you Hispanic/Latino?",
+        "type": "combobox",
+        "required": false
+      },
+      {
+        "label": "Veteran Status",
+        "type": "combobox",
+        "required": false
+      }
+    ]
+  },
+  {
+    "source": "greenhouse",
+    "url": "https://job-boards.greenhouse.io/figma/jobs/5579204004?gh_jid=5579204004",
+    "fields": [
+      {
+        "label": "First Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Last Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Email",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Country*",
+        "type": "combobox",
+        "required": true
+      },
+      {
+        "label": "Phone",
+        "type": "tel",
+        "required": true
+      },
+      {
+        "label": "Location (City)*",
+        "type": "combobox",
+        "required": true
+      },
+      {
+        "label": "Resume/CV*",
+        "type": "file",
+        "required": true
+      },
+      {
+        "label": "LinkedIn Profile",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Other Website",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Why do you want to join Figma?",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "label": "Pronouns",
+        "type": "combobox",
+        "required": false
+      },
+      {
+        "label": "Additional Information",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "label": "From where do you intend to work? ",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Preferred First Name",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Are you authorized to work in the country for which you applied? *",
+        "type": "combobox",
+        "required": true
+      },
+      {
+        "label": "Have you ever worked for Figma before, as an employee or a contractor/consultant? *",
+        "type": "combobox",
+        "required": true
+      },
+      {
+        "label": "Gender",
+        "type": "combobox",
+        "required": false
+      },
+      {
+        "label": "Are you Hispanic/Latino?",
+        "type": "combobox",
+        "required": false
+      },
+      {
+        "label": "Veteran Status",
+        "type": "combobox",
+        "required": false
+      }
+    ]
+  },
+  {
+    "source": "lever",
+    "url": "https://jobs.lever.co/levelai/c55479cf-bc3e-471b-9ed7-ac213b0ee8b5/apply",
+    "fields": [
+      {
+        "label": "Resume/CV ✱",
+        "type": "file",
+        "required": true
+      },
+      {
+        "label": "Full name✱",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Email✱",
+        "type": "email",
+        "required": true
+      },
+      {
+        "label": "Phone ✱",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Current location ✱",
+        "type": "location-autocomplete",
+        "required": true
+      },
+      {
+        "label": "Current company ✱",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "LinkedIn URL✱",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Twitter URL",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "GitHub URL",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Portfolio URL",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Other website",
+        "type": "text",
+        "required": false
+      }
+    ]
+  },
+  {
+    "source": "lever",
+    "url": "https://jobs.lever.co/levelai/5f299aa0-d358-43ae-a2a4-58b9ac1d426d/apply",
+    "fields": [
+      {
+        "label": "Resume/CV ✱",
+        "type": "file",
+        "required": true
+      },
+      {
+        "label": "Full name✱",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Email✱",
+        "type": "email",
+        "required": true
+      },
+      {
+        "label": "Phone ✱",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Current location ✱",
+        "type": "location-autocomplete",
+        "required": true
+      },
+      {
+        "label": "Current company ✱",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "LinkedIn URL✱",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Twitter URL",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "GitHub URL",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Portfolio URL",
+        "type": "text",
+        "required": false
+      },
+      {
+        "label": "Other website",
+        "type": "text",
+        "required": false
+      }
+    ]
+  },
+  {
+    "source": "ashby",
+    "url": "https://jobs.ashbyhq.com/notion/1fc309c8-da20-4ff2-84c7-8b863ece2b0a/application",
+    "fields": [
+      {
+        "label": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Email",
+        "type": "email",
+        "required": true
+      },
+      {
+        "label": "Phone",
+        "type": "tel",
+        "required": true
+      },
+      {
+        "label": "Start typing...",
+        "type": "combobox",
+        "required": false
+      },
+      {
+        "label": "Resume",
+        "type": "file",
+        "required": true
+      },
+      {
+        "label": "LinkedIn Profile",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "What pronouns would you like our team to use when addressing you? — He/Him",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "What pronouns would you like our team to use when addressing you? — She/Her",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "What pronouns would you like our team to use when addressing you? — They/Them",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "What pronouns would you like our team to use when addressing you? — Prefer not to say",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "What pronouns would you like our team to use when addressing you? — Not represented here",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "How did you hear about this opportunity? (select all that apply) — LinkedIn",
+        "type": "checkbox",
+        "required": false
+      },
+      {
+        "label": "How did you hear about this opportunity? (select all that apply) — Glassdoor",
+        "type": "checkbox",
+        "required": false
+      },
+      {
+        "label": "How did you hear about this opportunity? (select all that apply) — Notion Blog",
+        "type": "checkbox",
+        "required": false
+      },
+      {
+        "label": "How did you hear about this opportunity? (select all that apply) — Notion Employee",
+        "type": "checkbox",
+        "required": false
+      },
+      {
+        "label": "How did you hear about this opportunity? (select all that apply) — Notion Website",
+        "type": "checkbox",
+        "required": false
+      },
+      {
+        "label": "How did you hear about this opportunity? (select all that apply) — Billboard/Outdoor Ads",
+        "type": "checkbox",
+        "required": false
+      },
+      {
+        "label": "How did you hear about this opportunity? (select all that apply) — Conference or Meetup",
+        "type": "checkbox",
+        "required": false
+      },
+      {
+        "label": "Gender — Male",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Gender — Female",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Gender — Decline to self-identify",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Race — Hispanic or Latino",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Race — White (Not Hispanic or Latino)",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Race — Black or African American (Not Hispanic or Latino)",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Race — Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Race — Asian (Not Hispanic or Latino)",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Race — American Indian or Alaska Native (Not Hispanic or Latino)",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Two or More Races (Not Hispanic or Latino)",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Race — Decline to self-identify",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Veteran Status — I identify as one or more of the classifications of protected veteran listed above",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Veteran Status — I am not a protected veteran",
+        "type": "radio",
+        "required": false
+      },
+      {
+        "label": "Veteran Status — I decline to self-identify for protected veteran status",
+        "type": "radio",
+        "required": false
+      }
+    ]
+  }
+]

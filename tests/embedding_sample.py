@@ -1,0 +1,5 @@
+import time
+from semantic_memory import embed,cosine,eligible
+pairs=[('How did you hear about us?','Where did you hear about this role?'),('How did you hear about us?','How did you hear about our opening?'),('What is your preferred work location?','Which work location do you prefer?'),('Are you willing to relocate for this position?','Would you be willing to move for this role?'),('What is your available start date?','When can you start working?'),('How many years of Python experience do you have?','How many years of Java experience do you have?'),('Are you willing to work weekends?','Are you unwilling to work weekends?'),('What is your preferred office location?','What is your preferred remote location?'),('Do you have a driving license?','Do you have a professional certification?'),('What is your Github profile URL?','What is your LinkedIn profile URL?')]
+texts=[s for pair in pairs for s in pair];t=time.perf_counter();vectors=embed('http://127.0.0.1:11434/v1','nomic-embed-text',texts);print('seconds',round(time.perf_counter()-t,2))
+for i,(a,b) in enumerate(pairs):print(round(cosine(vectors[i*2],vectors[i*2+1]),3),a,'|',b)
